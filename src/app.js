@@ -46,25 +46,35 @@ app.get('/help',(req,res)=>{
 })
 
 app.get('/weather', (req, res) => {
-    if (!req.query.address){
-        return res.send({error: 'You must provide the search terms!'
+    if (req.query.address){
+        geocode(req.query.address, (error, {latitude, longitude, location}={}) => {
+            if (error){
+                return res.send({error})
+            }
+            forecast(longitude, latitude, (error, forecastData) => {
+                if (error){
+                    return res.send({error})
+                }
+    
+                res.send({
+                    forecast: forecastData,
+                    location: location,
+                    address: req.query.address
+                })
+            })
         })
-    }
-    geocode(req.query.address, (error, {latitude, longitude, location}={}) => {
-        if (error){
-            return res.send({error})
-        }
-        forecast(longitude, latitude, (error, forecastData) => {
+    }else if(req.query.longitude && req.query.latitude){
+        forecast(req.query.latitude, req.query.longitude, (error, forecastData) => {
             if (error){
                 return res.send({error})
             }
 
             res.send({
                 forecast: forecastData,
-                location: location,
-                address: req.query.address
             })
         })
+    }else
+        return res.send({error: 'You must provide the search terms!'
     })
 })
 

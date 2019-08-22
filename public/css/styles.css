@@ -53,3 +53,12 @@ button {
     color: white;
     padding: 8px;
 }
+
+#send-location {
+    cursor: pointer;
+    border:none; 
+    background: white;
+    color: #888888;
+    position: relative;
+    top: 5px;
+}
