@@ -1,0 +1,27 @@
+{
+  "islamabad": {
+    "blood": ["O+ blood", "B+ blood", "B- blood"],
+    "clothes": ["New Jacket", "Clothes for winter", "Shoes", "Kids' clothes"],
+    "books": ["Shahabnama", "Winner stands Alone"]
+  },
+  "lahore": {
+    "blood": ["A- blood", "B+ blood", "B- blood"],
+    "clothes": ["New Jacket", "Clothes for winter", "Shoes"],
+    "books": ["Shahabnama", "Introduction to Blockchain", "Database Management"]
+  },
+  "faisalabad": {
+    "blood": ["O- blood", "A+ blood", "A- blood", "B+ blood"],
+    "clothes": ["Shoes", "Socks", "Muffler", "Shirts", "Kids' clothes"],
+    "books": ["Shahabnama", "The Bastards of Istumbul", "Database Management"]
+  },
+  "karachi": {
+    "blood": ["O+ blood", "O- blood", "A- blood", "B- blood"],
+    "clothes": ["New Jacket", "Clothes for winter", "Socks", "Pants"],
+    "books": ["Shahabnama", "The Bastards of Istumbul"]
+  },
+  "peshawar": {
+    "blood": ["A+ blood", "A- blood", "B+ blood", "B- blood"],
+    "clothes": ["Muffler", "Shirts", "Pants", "Kids' clothes"],
+    "books": ["The Bastards of Istumbul", "Introduction to Blockchain"]
+  }
+}
